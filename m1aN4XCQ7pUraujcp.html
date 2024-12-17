@@ -1,0 +1,1638 @@
+<html><head><base href="/" /><title>Southwest Showcase Showdown 2025</title>
+<style>
+:root {
+  --primary: #ff7f00; /* Brighter orange */
+  --secondary: #283593; /* Lighter navy blue */
+  --accent: #ffd700; /* Keep gold */
+  --light: #ffffff; /* Pure white for better contrast */
+  --dark: #000000; /* Pure black for better contrast */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.header {
+  background: var(--secondary);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo svg {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(26, 35, 126, 0.65), rgba(26, 35, 126, 0.65)), url('/a/4c53f679-553d-4b09-9598-ffbb4b78f02c');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  padding-top: 80px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem; /* Slightly larger */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Add shadow for better visibility */
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  color: #ffffff;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.camp-announcement {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-top: 2rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.key-details {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.detail-card h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Updated registration-section styling */
+.registration-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/4d1ef455-4891-4076-a178-7e921c29e18a');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+/* Updated section title for better visibility */
+.registration-section .section-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 auto 2rem;
+}
+
+/* Enhanced registration form visibility */
+.registration-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Make form elements more prominent */
+.form-group label {
+  font-weight: 600;
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.form-group input,
+.form-group select {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--secondary);
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.required-note {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.brackets-section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.division-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.division-tab {
+  padding: 0.5rem 1.5rem;
+  background: var(--light);
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.division-tab.active {
+  background: var(--secondary);
+  color: white;
+}
+
+.bracket-container {
+  overflow-x: auto;
+  padding: 2rem 0;
+  display: none;
+}
+
+.bracket-container.active {
+  display: block;
+}
+
+.bracket {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1000px;
+}
+
+.bracket-round {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.bracket-round h3 {
+  text-align: center;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.bracket-game {
+  background: white;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.bracket-game::after {
+  content: '';
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  width: 2rem;
+  height: 2px;
+  background: var(--secondary);
+}
+
+.bracket-round:last-child .bracket-game::after {
+  display: none;
+}
+
+.team {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.team:last-child {
+  border-bottom: none;
+}
+
+.bracket-title {
+  text-align: center;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.waiver-content {
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/e3c745f9-40dd-417b-b912-c0f6bd3dc628');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: white; /* Change text color to white for better visibility */
+  backdrop-filter: none; /* Remove blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.waiver-content h3 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.waiver-content p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.signature-section {
+  background: rgba(255, 255, 255, 0.98);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.signature-section .form-group input {
+  background: white;
+  border: 2px solid var(--secondary);
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.signature-section .btn-secondary {
+  background: var(--secondary);
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+}
+
+.signature-section .btn-secondary:hover {
+  background: #3f51b5;
+  transform: translateY(-2px);
+}
+
+#cardNumber,
+#expiryDate,
+#cvv {
+  font-family: monospace;
+}
+
+.form-group input[type="text"][pattern] {
+  letter-spacing: 1px;
+}
+
+#paymentForm .form-footer {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+#paymentForm .btn-primary {
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+#paymentForm .btn-primary:hover {
+  background: #ffc800;
+}
+
+@media print {
+  .waiver-content {
+    font-size: 12pt;
+  }
+  
+  .signature-section input {
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+  
+  .btn {
+    display: none;
+  }
+}
+
+.registration-section:nth-of-type(3) {  /* Target the player registration section */
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/878e4527-89dc-4d84-8577-92ea202b019e');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+/* Update form visibility and contrast for player registration */
+.registration-section:nth-of-type(3) .registration-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Make the section title more visible against the new background */
+.registration-section:nth-of-type(3) .section-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 auto 2rem;
+}
+
+/* Enhance form labels visibility */
+.registration-section:nth-of-type(3) .form-group label {
+  font-weight: 600;
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Enhance form inputs */
+.registration-section:nth-of-type(3) .form-group input,
+.registration-section:nth-of-type(3) .form-group select {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--secondary);
+}
+
+/* Update the background for the payment section (last registration-section) */
+.registration-section:nth-of-type(4) {  /* Target the payment section */
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/f4acd50f-1362-4f4c-ae96-19286c516d65');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+/* Update form visibility and contrast for payment section */
+.registration-section:nth-of-type(4) .registration-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Make the section title more visible against the new background */
+.registration-section:nth-of-type(4) .section-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 auto 2rem;
+}
+
+/* Enhance form labels visibility */
+.registration-section:nth-of-type(4) .form-group label {
+  font-weight: 600;
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Enhance form inputs */
+.registration-section:nth-of-type(4) .form-group input,
+.registration-section:nth-of-type(4) .form-group select {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--secondary);
+}
+
+/* Vendor section styles */
+.vendor-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/878e4527-89dc-4d84-8577-92ea202b019e');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.vendor-type {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.vendor-type label {
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.vendor-requirements {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.vendor-requirements h4 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.vendor-requirements ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Sponsor section styles */
+.sponsor-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/878e4527-89dc-4d84-8577-92ea202b019e');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.sponsorship-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tier-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.tier-card h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.tier-price {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.tier-benefits {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.tier-benefits li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tier-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.logo-preview {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed var(--secondary);
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.logo-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* About section styles */
+.about-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.35), rgba(40, 53, 147, 0.35)), url('/a/878e4527-89dc-4d84-8577-92ea202b019e');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.about-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.about-description {
+  flex: 1;
+}
+
+.about-logo {
+  flex: 0 0 200px;  /* Keep size fixed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: white; /* Add white background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Add stronger shadow */
+  border: 2px solid var(--secondary); /* Add border */
+}
+
+.about-logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: brightness(1.2) contrast(1.1); /* Increase brightness and contrast */
+  transition: transform 0.3s ease;
+}
+
+.about-logo img:hover {
+  transform: scale(1.05); /* Add subtle hover effect */
+}
+
+@media (max-width: 768px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-logo {
+    margin-top: 1.5rem;
+  }
+}
+
+.about-text {
+  margin-bottom: 3rem;
+}
+
+.about-text h3,
+.contact-info h3,
+.business-hours h3 {
+  color: var(--secondary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item h4 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+.business-hours {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.business-hours p {
+  margin-bottom: 0.5rem;
+}
+
+/* New Football Camp Section Styles */
+.football-camp-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(rgba(40, 53, 147, 0.75), rgba(40, 53, 147, 0.75)), url('/a/58068054-c822-4aa9-a526-06aa36c3aec8');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  color: white;
+}
+
+.camp-overview {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.camp-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.camp-detail-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.camp-detail-item h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <nav>
+    <a href="/" class="logo">
+      <svg viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" fill="gold"/>
+        <path d="M15,25 L35,25 M25,15 L25,35" stroke="navy" stroke-width="5"/>
+      </svg>
+      SWS 2025
+    </a>
+    <div class="nav-links">
+      <a href="https://swsshowdown.com">Home</a>
+      <a href="https://swsshowdown.com/about">About</a>
+      <a href="https://swsshowdown.com/divisions">Divisions & Rules</a>
+      <a href="https://swsshowdown.com/registration">Registration</a>
+      <a href="https://swsshowdown.com/schedule">Schedule</a>
+      <a href="https://swsshowdown.com/contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Southwest Showcase Showdown</h1>
+      <p>Join the Biggest 7-on-7 Tournament in the Southwest!</p>
+      <p>April 2025 | Mesa del Sol Football Fields, Albuquerque, NM</p>
+      <div class="cta-buttons">
+        <a href="https://swsshowdown.com/registration" class="btn btn-primary">Register Your Team</a>
+        <a href="https://swsshowdown.com/about" class="btn btn-secondary">Learn More</a>
+      </div>
+      <div class="camp-announcement">
+        Free Kids Football Camp!
+      </div>
+    </div>
+  </section>
+
+  <section class="key-details">
+    <div class="detail-card">
+      <h3>Dates</h3>
+      <p>April 2025</p>
+    </div>
+    <div class="detail-card">
+      <h3>Location</h3>
+      <p>Mesa del Sol Football Fields<br>Albuquerque, New Mexico</p>
+    </div>
+    <div class="detail-card">
+      <h3>Teams</h3>
+      <p>120 Total Teams</p>
+    </div>
+    <div class="detail-card">
+      <h3>Prize</h3>
+      <p>$1,500 for division winners!</p>
+    </div>
+    <div class="detail-card">
+      <h3>Registration Fee</h3>
+      <p>$500 per team<br>$250 deposit to reserve<br><br>$50 per player<br>$25 deposit per player</p>
+    </div>
+    <div class="detail-card">
+      <h3>Team Composition</h3>
+      <p>7 Players<br>3 Substitutes</p>
+    </div>
+    <div class="detail-card">
+      <h3>Divisions</h3>
+      <p>U18 Boys<br>
+         U18 Girls<br>
+         U16 Boys<br>
+         U15 Boys<br>
+         U14 Boys<br>
+         U12 Boys<br>
+         U10 Boys<br>
+         U8 Boys</p>
+    </div>
+  </section>
+
+  <section class="brackets-section">
+    <h2 class="bracket-title">Tournament Brackets</h2>
+    
+    <div class="division-tabs">
+      <button class="division-tab active" data-division="u18-boys">U18 Boys</button>
+      <button class="division-tab" data-division="u18-girls">U18 Girls</button>
+      <button class="division-tab" data-division="u16-boys">U16 Boys</button>
+      <button class="division-tab" data-division="u15-boys">U15 Boys</button>
+      <button class="division-tab" data-division="u14-boys">U14 Boys</button>
+      <button class="division-tab" data-division="u12-boys">U12 Boys</button>
+      <button class="division-tab" data-division="u10-boys">U10 Boys</button>
+      <button class="division-tab" data-division="u8-boys">U8 Boys</button>
+    </div>
+
+    <div class="bracket-container active" id="u18-boys">
+      <div class="bracket">
+        <div class="bracket-round">
+          <h3>Round 1</h3>
+          <div class="bracket-game">
+            <div class="team">Team 1</div>
+            <div class="team">Team 2</div>
+          </div>
+          <div class="bracket-game">
+            <div class="team">Team 3</div>
+            <div class="team">Team 4</div>
+          </div>
+        </div>
+        <div class="bracket-round">
+          <h3>Quarterfinals</h3>
+          <div class="bracket-game">
+            <div class="team">Winner 1/2</div>
+            <div class="team">Winner 3/4</div>
+          </div>
+        </div>
+        <div class="bracket-round">
+          <h3>Semifinals</h3>
+          <div class="bracket-game">
+            <div class="team">TBD</div>
+            <div class="team">TBD</div>
+          </div>
+        </div>
+        <div class="bracket-round">
+          <h3>Finals</h3>
+          <div class="bracket-game">
+            <div class="team">TBD</div>
+            <div class="team">TBD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat bracket-container for other divisions -->
+  </section>
+
+  <section class="football-camp-section">
+    <h2 class="section-title">Free Kids Football Camp</h2>
+    
+    <div class="camp-overview">
+      <h3 style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;">Experience Elite Training</h3>
+      <p style="font-size: 1.2rem; line-height: 1.6;">Join us for an incredible day of football training with experienced coaches and players. Learn fundamental skills, advanced techniques, and build confidence on the field!</p>
+      <div style="margin: 2rem auto; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.9); padding: 1rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+        <img src="/a/58068054-c822-4aa9-a526-06aa36c3aec8" alt="Football Camp Logo" style="width: 100%; height: 100%; object-fit: contain; filter: brightness(1.2) contrast(1.1);">
+      </div>
+    </div>
+
+    <div class="camp-details">
+      <div class="camp-detail-item">
+        <h4>Date & Time</h4>
+        <p>April 2025<br>9:00 AM - 3:00 PM</p>
+      </div>
+      <div class="camp-detail-item">
+        <h4>Location</h4>
+        <p>Mesa del Sol Football Fields<br>Albuquerque, NM</p>
+      </div>
+      <div class="camp-detail-item">
+        <h4>Age Groups</h4>
+        <p>8-18 years old<br>Grouped by age</p>
+      </div>
+      <div class="camp-detail-item">
+        <h4>What to Bring</h4>
+        <p>Athletic wear<br>Cleats<br>Water bottle</p>
+      </div>
+    </div>
+
+    <form class="registration-form" id="campRegistrationForm">
+      <h3 style="color: var(--secondary); margin-bottom: 1.5rem;">Camp Registration</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="campPlayerName">Player Name *</label>
+          <input type="text" id="campPlayerName" name="campPlayerName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="campPlayerAge">Player Age *</label>
+          <input type="number" id="campPlayerAge" name="campPlayerAge" min="8" max="18" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="campParentName">Parent/Guardian Name *</label>
+          <input type="text" id="campParentName" name="campParentName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="campEmail">Email *</label>
+          <input type="email" id="campEmail" name="campEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="campPhone">Phone Number *</label>
+          <input type="tel" id="campPhone" name="campPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+
+        <div class="form-group">
+          <label for="campExperience">Football Experience Level *</label>
+          <select id="campExperience" name="campExperience" required>
+            <option value="">Select Experience Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="campMedical">Medical Conditions/Allergies</label>
+          <textarea id="campMedical" name="campMedical" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="campEmergencyContact">Emergency Contact Name & Phone *</label>
+          <input type="text" id="campEmergencyContact" name="campEmergencyContact" required>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <p class="required-note">* Required fields</p>
+        <button type="submit" class="btn btn-primary">Register for Camp</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="registration-section">
+    <h2 class="section-title">Team Registration</h2>
+    <form class="registration-form" id="registrationForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="teamName">Team Name *</label>
+          <input type="text" id="teamName" name="teamName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="coachName">Coach Name *</label>
+          <input type="text" id="coachName" name="coachName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="division">Age Division *</label>
+          <select id="division" name="division" required>
+            <option value="">Select Division</option>
+            <option value="u18-boys">U18 Boys</option>
+            <option value="u18-girls">U18 Girls</option>
+            <option value="u16-boys">U16 Boys</option>
+            <option value="u15-boys">U15 Boys</option>
+            <option value="u14-boys">U14 Boys</option>
+            <option value="u12-boys">U12 Boys</option>
+            <option value="u10-boys">U10 Boys</option>
+            <option value="u8-boys">U8 Boys</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+          <label for="state">State *</label>
+          <select id="state" name="state" required>
+            <option value="">Select State</option>
+            <option value="AZ">Arizona</option>
+            <option value="NM">New Mexico</option>
+            <option value="TX">Texas</option>
+            <option value="CO">Colorado</option>
+            <option value="UT">Utah</option>
+            <option value="NV">Nevada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="zip">ZIP Code *</label>
+          <input type="text" id="zip" name="zip" pattern="[0-9]{5}" required>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <p class="required-note">* Required fields</p>
+        <button type="submit" class="btn btn-primary">Submit Registration</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="registration-section">
+    <h2 class="section-title">Player Registration</h2>
+    <form class="registration-form" id="playerRegistrationForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="playerTeam">Team Name *</label>
+          <input type="text" id="playerTeam" name="playerTeam" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="playerName">Player Name *</label>
+          <input type="text" id="playerName" name="playerName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="playerDOB">Date of Birth *</label>
+          <input type="date" id="playerDOB" name="playerDOB" required>
+        </div>
+
+        <div class="form-group">
+          <label for="playerPosition">Primary Position *</label>
+          <select id="playerPosition" name="playerPosition" required>
+            <option value="">Select Position</option>
+            <option value="QB">Quarterback</option>
+            <option value="RB">Running Back</option>
+            <option value="WR">Wide Receiver</option>
+            <option value="TE">Tight End</option>
+            <option value="DB">Defensive Back</option>
+            <option value="LB">Linebacker</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="playerEmail">Email *</label>
+          <input type="email" id="playerEmail" name="playerEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="parentName">Parent/Guardian Name *</label>
+          <input type="text" id="parentName" name="parentName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="parentPhone">Parent/Guardian Phone *</label>
+          <input type="tel" id="parentPhone" name="parentPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+
+        <div class="form-group">
+          <label for="emergencyContact">Emergency Contact *</label>
+          <input type="text" id="emergencyContact" name="emergencyContact" required>
+        </div>
+
+        <div class="form-group">
+          <label for="emergencyPhone">Emergency Contact Phone *</label>
+          <input type="tel" id="emergencyPhone" name="emergencyPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <p class="required-note">* Required fields</p>
+        <button type="submit" class="btn btn-primary">Submit Player Registration</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="registration-section">
+    <h2 class="section-title">Player Waiver Form</h2>
+    <div class="registration-form" id="waiverForm">
+      <div class="waiver-content">
+        <h3 style="margin-bottom: 1rem;">SOUTHWEST SHOWCASE SHOWDOWN 2025 - LIABILITY WAIVER AND RELEASE</h3>
+        
+        <p style="margin-bottom: 1rem;">I, the undersigned participant and parent/legal guardian (if participant is under 18 years of age), acknowledge and fully understand that each participant will be engaging in activities that involve risk of serious injury, including permanent disability or death, which might result not only from their own actions, inactions or negligence, but from the actions, inactions or negligence of others, the rules of play, or the condition of the premises or equipment used.</p>
+        
+        <p style="margin-bottom: 1rem;">1. I knowingly and freely assume all such risks, both known and unknown, and assume full responsibility for my participation.</p>
+        
+        <p style="margin-bottom: 1rem;">2. I willingly agree to comply with the stated and customary terms and conditions for participation. If, however, I observe any unusual significant hazard during my presence or participation, I will remove myself from participation and bring such to the attention of the nearest official immediately.</p>
+        
+        <div class="signature-section" style="margin-top: 2rem;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="participantName">Participant's Full Name (Print) *</label>
+              <input type="text" id="participantName" name="participantName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="participantSignature">Participant's Signature *</label>
+              <input type="text" id="participantSignature" name="participantSignature" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signatureDate">Date *</label>
+              <input type="date" id="signatureDate" name="signatureDate" required>
+            </div>
+
+            <div class="form-group">
+              <label for="guardianName">Parent/Legal Guardian Name (if under 18) *</label>
+              <input type="text" id="guardianName" name="guardianName">
+            </div>
+            
+            <div class="form-group">
+              <label for="guardianSignature">Parent/Legal Guardian Signature (if under 18) *</label>
+              <input type="text" id="guardianSignature" name="guardianSignature">
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button onclick="window.print()" class="btn btn-secondary">Print Waiver</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="registration-section">
+    <h2 class="section-title">Payment Information</h2>
+    <form class="registration-form" id="paymentForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="cardName">Cardholder Name *</label>
+          <input type="text" id="cardName" name="cardName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="cardNumber">Card Number *</label>
+          <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="1234-5678-9012-3456" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="expiryDate">Expiry Date *</label>
+          <input type="text" id="expiryDate" name="expiryDate" pattern="[0-9]{2}/[0-9]{2}" placeholder="MM/YY" required>
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV *</label>
+          <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" placeholder="123" required>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentType">Payment Type *</label>
+          <select id="paymentType" name="paymentType" required>
+            <option value="">Select Payment Type</option>
+            <option value="full">Full Payment ($500)</option>
+            <option value="deposit">Deposit Only ($250)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="billingZip">Billing ZIP Code *</label>
+          <input type="text" id="billingZip" name="billingZip" pattern="[0-9]{5}" required>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <p class="required-note">* Required fields</p>
+        <button type="submit" class="btn btn-primary">Process Payment</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="vendor-section">
+    <h2 class="section-title">Vendor & Food Truck Registration</h2>
+    <form class="registration-form" id="vendorForm">
+      <div class="vendor-type">
+        <label>Vendor Type *</label>
+        <div style="margin-top: 0.5rem;">
+          <input type="radio" id="foodTruck" name="vendorType" value="foodTruck" required>
+          <label for="foodTruck">Food Truck</label>
+          
+          <input type="radio" id="merchandise" name="vendorType" value="merchandise" style="margin-left: 1rem;">
+          <label for="merchandise">Merchandise Vendor</label>
+          
+          <input type="radio" id="services" name="vendorType" value="services" style="margin-left: 1rem;">
+          <label for="services">Services Vendor</label>
+        </div>
+      </div>
+
+      <div class="vendor-requirements">
+        <h4>Requirements & Information:</h4>
+        <ul>
+          <li>Vendor Fee: $250 for the entire tournament</li>
+          <li>Must provide own power/generator if needed</li>
+          <li>Must have current business license</li>
+          <li>Food vendors must have current food service permit</li>
+          <li>Must provide proof of liability insurance (minimum $1,000,000 coverage)</li>
+          <li>Set up time: 6:00 AM each day</li>
+          <li>Operating hours: 7:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="vendor-grid">
+        <div class="form-group">
+          <label for="businessName">Business Name *</label>
+          <input type="text" id="businessName" name="businessName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="contactName">Contact Name *</label>
+          <input type="text" id="contactName" name="contactName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="businessPhone">Business Phone *</label>
+          <input type="tel" id="businessPhone" name="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+
+        <div class="form-group">
+          <label for="businessEmail">Business Email *</label>
+          <input type="email" id="businessEmail" name="businessEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="vendorDescription">Description of Products/Services *</label>
+          <textarea id="vendorDescription" name="vendorDescription" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="spaceNeeded">Space Needed (in feet) *</label>
+          <input type="text" id="spaceNeeded" name="spaceNeeded" placeholder="e.g., 20x10" required>
+        </div>
+
+        <div class="form-group">
+          <label for="powerNeeded">Power Requirements</label>
+          <select id="powerNeeded" name="powerNeeded">
+            <option value="none">No power needed - Self sufficient</option>
+            <option value="110v">110V Standard Outlet</option>
+            <option value="220v">220V Power Required</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="licenseNumber">Business License Number *</label>
+          <input type="text" id="licenseNumber" name="licenseNumber" required>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <p class="required-note">* Required fields</p>
+        <button type="submit" class="btn btn-primary">Submit Vendor Application</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="sponsor-section">
+    <h2 class="section-title">Become a Sponsor</h2>
+    
+    <div class="sponsorship-tiers">
+      <div class="tier-card">
+        <h3>Gold Sponsor</h3>
+        <div class="tier-price">$5,000</div>
+        <ul class="tier-benefits">
+          <li>Premium logo placement on all materials</li>
+          <li>VIP tent at tournament</li>
+          <li>Social media promotion</li>
+          <li>Banner at main field</li>
+          <li>10 VIP parking passes</li>
+          <li>Recognition during awards ceremony</li>
+        </ul>
+      </div>
+      
+      <div class="tier-card">
+        <h3>Silver Sponsor</h3>
+        <div class="tier-price">$2,500</div>
+        <ul class="tier-benefits">
+          <li>Logo on tournament materials</li>
+          <li>Dedicated booth space</li>
+          <li>Social media mention</li>
+          <li>Banner at secondary field</li>
+          <li>5 VIP parking passes</li>
+        </ul>
+      </div>
+      
+      <div class="tier-card">
+        <h3>Bronze Sponsor</h3>
+        <div class="tier-price">$1,000</div>
+        <ul class="tier-benefits">
+          <li>Logo on website</li>
+          <li>Booth space</li>
+          <li>Social media mention</li>
+          <li>2 VIP parking passes</li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="registration-form" id="sponsorForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="companyName">Company Name *</label>
+          <input type="text" id="companyName" name="companyName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="sponsorshipTier">Sponsorship Tier *</label>
+          <select id="sponsorshipTier" name="sponsorshipTier" required>
+            <option value="">Select Tier</option>
+            <option value="gold">Gold Sponsor - $5,000</option>
+            <option value="silver">Silver Sponsor - $2,500</option>
+            <option value="bronze">Bronze Sponsor - $1,000</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="contactPerson">Contact Person *</label>
+          <input type="text" id="contactPerson" name="contactPerson" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sponsorEmail">Email *</label>
+          <input type="email" id="sponsorEmail" name="sponsorEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sponsorPhone">Phone *</label>
+          <input type="tel" id="sponsorPhone" name="sponsorPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="logoUpload">Company Logo (PNG or SVG recommended) *</label>
+        <input type="file" id="logoUpload" name="logoUpload" accept="image/*" required>
+        <div class="logo-preview" id="logoPreview">
+          <span>Logo Preview</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="specialRequests">Special Requirements or Notes</label>
+        <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+      </div>
+
+      <div class="form-footer">
+        <p class="required-note">* Required fields</p>
+        <button type="submit" class="btn btn-primary">Submit Sponsorship Application</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="about-section">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-container">
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Who We Are</h3>
+          <div class="about-content-wrapper">
+            <div class="about-description">
+              <p>Southwest Showcase Showdown is the premier youth football tournament organization in the Southwest United States. Founded in 2024, we have grown to become the region's largest and most prestigious 7-on-7 tournament, bringing together talented young athletes from across the Southwest.</p>
+              
+              <p>Our mission is to provide high-quality, competitive opportunities for youth athletes while promoting sportsmanship, skill development, and community engagement.</p>
+            </div>
+            <div class="about-logo">
+              <img src="/a/1f4edeb3-882e-46bc-8409-baffb2cdb86d" alt="Southwest Showcase Showdown Logo">
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h4>Main Office</h4>
+              <p>Mesa del Sol Football Fields</p>
+              <p>Albuquerque, NM 87106</p>
+            </div>
+            
+            <div class="contact-item">
+              <h4>Phone Numbers</h4>
+              <p>Main: (951) 472-1140 - Robert Smith</p>
+              <p>Tournament Director: (505) 570-0851 - James Santillanes</p>
+              <p>Tournament Coordinator: (925) 804-0131 - CJ Cox Hudson</p>
+            </div>
+            
+            <div class="contact-item">
+              <h4>Email Addresses</h4>
+              <p>General Inquiries: bossupe4@gmail.com</p>
+              <p>Registration: robcal.smith@gmail.com</p>
+              <p>Sponsorship: coach.cj99@gmail.com</p>
+            </div>
+            
+            <div class="contact-item">
+              <h4>Social Media</h4>
+              <div class="social-links">
+                <a href="https://facebook.com/swsshowdown" target="_blank">Facebook</a>
+                <a href="https://twitter.com/swsshowdown" target="_blank">Twitter</a>
+                <a href="https://instagram.com/swsshowdown" target="_blank">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="business-hours">
+          <h3>Business Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 5:00 PM MDT</p>
+          <p>Tournament Weekend: 6:00 AM - 8:00 PM MDT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+document.getElementById('paymentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // In a real implementation, this would connect to a payment processor
+  alert('Payment processing would be handled securely through a payment gateway');
+});
+
+// Format card number with dashes
+document.getElementById('cardNumber').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 16) value = value.slice(0, 16);
+  let formattedValue = value.replace(/(\d{4})(?=\d)/g, '$1-');
+  e.target.value = formattedValue;
+});
+
+// Format expiry date with slash
+document.getElementById('expiryDate').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 4) value = value.slice(0, 4);
+  if (value.length > 2) {
+    value = value.slice(0, 2) + '/' + value.slice(2);
+  }
+  e.target.value = value;
+});
+
+// Limit CVV to 3-4 digits
+document.getElementById('cvv').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 4) value = value.slice(0, 4);
+  e.target.value = value;
+});
+
+// Division tab functionality
+document.querySelectorAll('.division-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs and containers
+    document.querySelectorAll('.division-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.bracket-container').forEach(c => c.classList.remove('active'));
+    
+    // Add active class to clicked tab and corresponding container
+    tab.classList.add('active');
+    const division = tab.dataset.division;
+    document.getElementById(division)?.classList.add('active');
+  });
+});
+
+// Vendor form submission handling
+document.getElementById('vendorForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Handle vendor form submission
+  alert('Thank you for your vendor application! We will review and contact you shortly.');
+});
+
+// Sponsor form submission handling
+document.getElementById('sponsorForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Handle sponsor form submission
+  alert('Thank you for your sponsorship application! We will review and contact you shortly.');
+});
+
+// Logo upload preview
+document.getElementById('logoUpload').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const preview = document.getElementById('logoPreview');
+      preview.innerHTML = `<img src="${e.target.result}" alt="Logo preview">`;
+    }
+    reader.readAsDataURL(file);
+  }
+});
+
+// Camp registration form submission handling
+document.getElementById('campRegistrationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you for registering for the football camp! We will send confirmation details to your email.');
+});
+
+// Format phone number for camp registration
+document.getElementById('campPhone').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 10) value = value.slice(0, 10);
+  if (value.length >= 6) {
+    value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6);
+  } else if (value.length >= 3) {
+    value = value.slice(0, 3) + '-' + value.slice(3);
+  }
+  e.target.value = value;
+});
+</script>
+</body>
+</html>
